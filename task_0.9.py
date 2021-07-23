@@ -1,10 +1,11 @@
-#Task0.9
-
-def vowel(keyword):
+#Task 0.9
+def vowel_only(keyword):
+    vowels = [] 
+    print("Vowels: ", end="")
     for i in keyword:
         if i.islower() and i in "aeiou":
-            print(i)
+            vowels.append(i)
         else:
-            if i.isupper() and i in "AEIOU":
-                print(i)
-vowel("moUntAin")
+            continue
+    print(",".join(vowels))
+vowel_only("Umuzi")
