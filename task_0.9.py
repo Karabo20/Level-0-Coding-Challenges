@@ -1,10 +1,10 @@
-#Task0.9
-def vowel_only(keyword):
-    vowels = [] 
-    for letter in keyword:
-        if letter in "AEIOU" or letter in "aeiou":
-            vowels.append(letter)
-        else:
-            continue
-    print("Vowels:", ",".join(vowels))
-vowel_only("Umuzi")
+# TASK0.9
+def vowels_only(keyword):
+    print(keyword)
+    vowel = ""
+    for i in range(len(keyword)):
+        if (keyword[i].lower() in keyword) and (keyword[i].lower() not in vowel):
+            vowel = vowel + keyword[i].lower()
+        elif (keyword[i] not in keyword[i+1:]) and (keyword[i] not in vowel):
+            vowel = vowel + keyword[i]
+    print(vowel)
